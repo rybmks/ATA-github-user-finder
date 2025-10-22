@@ -1,9 +1,13 @@
-function Button({ className, children }) {
+function Button({ className = '', children }) {
   return (
     <button
-      className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 
-        focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700
-        focus:outline-none dark:focus:ring-blue-800 ${className || ''}`}
+      className={`min-w-20 min-h-9 md:min-w-25 md:min-h-12 rounded bg-slate-800 py-1.5 px-3 
+        border border-transparent text-center text-sm text-white
+        transition-all shadow-sm hover:shadow
+      hover:bg-slate-700 focus:bg-slate-700 active:bg-slate-700
+        focus:outline-none focus:shadow-none active:shadow-none
+        disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none
+        ${className}`}
     >
       {children}
     </button>
