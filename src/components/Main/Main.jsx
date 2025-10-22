@@ -11,7 +11,7 @@ function Main() {
   const api = new Api();
 
   const fetchUser = async () => {
-    if (input || input.trim() !== '') {
+    if (input && input.trim() !== '') {
       try {
         const res = await api.getUser(input);
         setResponse(res.data);
