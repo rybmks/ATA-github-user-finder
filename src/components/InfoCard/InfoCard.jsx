@@ -2,6 +2,8 @@ import Card from '../Card/Card';
 import Button from '../Button/Button';
 
 function InfoCard({ response }) {
+  const profile_url = `https://github.com/${response.login}`;
+
   return (
     <Card>
       <div className="flex-col">
@@ -33,7 +35,9 @@ function InfoCard({ response }) {
           <div>Following {response && <h3>🙋‍♂️ {response.following}</h3>}</div>
         </Card>
         <div className="flex justify-center mt-5">
-          <Button className="mt-5">View on GitHub</Button>
+          <a href={profile_url}>
+            <Button className="mt-5">View on GitHub</Button>
+          </a>
         </div>
       </div>
     </Card>

@@ -3,7 +3,7 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import SearchInput from '../SearchInput/SearchInput';
 import Card from '../Card/Card';
 
-function Header() {
+function Header({ setText, onSearchClick }) {
   return (
     <Card>
       <div className="flex justify-between m-5">
@@ -13,7 +13,7 @@ function Header() {
         </div>
         <ThemeToggle></ThemeToggle>
       </div>
-      <SearchInput className="m-2 w-full mx-auto" />
+      <SearchInput setText={setText} onSearchClick={onSearchClick} className="m-2 w-full mx-auto" />
     </Card>
   );
 }
