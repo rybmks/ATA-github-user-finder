@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import InfoCard from '../InfoCard/InfoCard';
 import SearchCard from '../SearchCard/SearchCard';
 import UserNotFoundCard from '../UserNotFoundCard/UserNotFoundCard';
-import Api from '../../api/AxiousInstance';
+import Api from '../../api/AxiosInstance';
 
 function Main() {
   const [response, setResponse] = useState(null);
