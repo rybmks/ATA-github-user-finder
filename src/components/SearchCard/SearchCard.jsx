@@ -10,7 +10,7 @@ function SearchCard() {
           className="size-22 md:size-30 lg:size-35 my-5 mx-auto"
           alt="Search ico"
         />
-        <h2 className="mx-auto">Enter a GitHub userams search</h2>
+        <h2 className="mx-auto">Enter a GitHub username search</h2>
       </div>
     </Card>
   );
