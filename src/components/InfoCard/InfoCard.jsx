@@ -46,7 +46,6 @@ function InfoCard({ response }) {
             )}
           </div>
         </div>
-        <div></div>
         <Card className="flex items-center justify-between text-sm md:text-base lg:text-lg">
           <div>
             Repos {response && <p className="text-gray-500 mr-1">📚 {response.public_repos}</p>}
