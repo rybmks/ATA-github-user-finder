@@ -7,7 +7,7 @@ import Api from '../../api/AxiosInstance';
 
 function Main() {
   const [response, setResponse] = useState(null);
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const api = new Api();
 
   const fetchUser = async () => {
