@@ -7,7 +7,7 @@ function InfoCard({ response }) {
   return (
     <Card>
       <div className="flex-col">
-        <div className="flex items-start gap-4 md:gap-6">
+        <div className="flex items-start gap-4 md:gap-6 mb-3 lg:mb-5">
           {response && (
             <img
               src={response.avatar_url}
