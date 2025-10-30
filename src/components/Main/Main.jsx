@@ -45,7 +45,7 @@ function Main() {
       <>
         <InfoCard response={response} />
         <ReposCard repos={repos} />
-        <Calendar username={response.login}/>
+        <Calendar username={response.login} />
       </>
     );
   };
