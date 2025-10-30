@@ -6,7 +6,7 @@ import GitHubCalendar from 'react-github-calendar';
 import Card from '../Card/Card';
 
 /** 
- * There is no really need to create `Calendar`
+ * There is no real need to create `Calendar`
  * wrapper, nevertheless for possibility of changing 
  * logic it's considered to separate Calendar logic
 */
