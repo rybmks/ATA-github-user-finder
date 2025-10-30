@@ -24,7 +24,7 @@ class Api {
       );
     }
 
-    const endpoint = 'https://api.github.com/graphql';
+    const endpoint = '/graphql';
     const headers = {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
