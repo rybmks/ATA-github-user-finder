@@ -61,7 +61,7 @@ class Api {
       variables: variables,
     };
 
-    return axios.post(endpoint, body, { headers });
+    return this.axiosInstance.post(endpoint, body, { headers });
   }
 }
 
