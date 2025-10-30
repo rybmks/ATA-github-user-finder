@@ -4,32 +4,50 @@ import InfoCard from '../InfoCard/InfoCard';
 import SearchCard from '../SearchCard/SearchCard';
 import UserNotFoundCard from '../UserNotFoundCard/UserNotFoundCard';
 import Api from '../../api/AxiosInstance';
+import ReposCard from '../ReposCard/ReposCard';
+import Calendar from '../Calendar/Calendar';
 
 function Main() {
   const [response, setResponse] = useState(null);
-  const [input, setInput] = useState("");
+  const [repos, setRepos] = useState([]);
+  const [input, setInput] = useState('');
+
   const api = new Api();
 
   const fetchUser = async () => {
-    if (input && input.trim() !== '') {
+    const q = input.trim();
+    if (!q) return;
+
+    try {
+      const res = await api.getUser(q);
+      const user = res.data;
+      setResponse(user);
+
       try {
-        const res = await api.getUser(input);
-        setResponse(res.data);
-      } catch {
-        setResponse(undefined);
+        const pinnedRes = await api.getPinnedRepos(user.login);
+        const nodes = pinnedRes.data.data.user.pinnedItems.nodes ?? [];
+        setRepos(nodes);
+      } catch (e) {
+        console.warn('getPinnedRepos error:', e);
+        setRepos([]);
       }
+    } catch {
+      setResponse(undefined);
+      setRepos([]);
     }
   };
 
   const renderCard = () => {
-    switch (response) {
-      case null:
-        return <SearchCard />;
-      case undefined:
-        return <UserNotFoundCard />;
-      default:
-        return <InfoCard response={response}></InfoCard>;
-    }
+    if (response === null) return <SearchCard />;
+    if (response === undefined) return <UserNotFoundCard />;
+
+    return (
+      <>
+        <InfoCard response={response} />
+        <ReposCard repos={repos} />
+        <Calendar username={response.login}/>
+      </>
+    );
   };
 
   return (
