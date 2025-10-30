@@ -18,6 +18,11 @@ class Api {
 
   async getPinnedRepos(username) {
     const token = import.meta.env.VITE_GH_TOKEN;
+    if (!token) {
+      throw new Error(
+        "GitHub token (VITE_GH_TOKEN) is missing or empty. Please set the environment variable to a valid token."
+      );
+    }
 
     const endpoint = 'https://api.github.com/graphql';
     const headers = {
