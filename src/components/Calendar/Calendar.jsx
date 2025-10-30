@@ -10,7 +10,7 @@ import Card from '../Card/Card';
  * wrapper, nevertheless for possibility of changing 
  * logic it's considered to separate Calendar logic
 */
-export default function Calendar({username}) {
+export default function Calendar({ username }) {
     return (
         <Card>
             <GitHubCalendar username={username} />
