@@ -20,7 +20,7 @@ class Api {
     const token = import.meta.env.VITE_GH_TOKEN;
     if (!token) {
       throw new Error(
-        "GitHub token (VITE_GH_TOKEN) is missing or empty. Please set the environment variable to a valid token."
+        'GitHub token (VITE_GH_TOKEN) is missing or empty. Please set the environment variable to a valid token.'
       );
     }
 
