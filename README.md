@@ -38,7 +38,7 @@ A small React app used in the "Principles of Web Development (ATA)" course to se
 
 Opens at http://localhost:5173
 
-## Ui Examples
+## UI Examples
 
 ![UI Example #1](.github/img/ui_example1.png)
 ![UI Example #2](.github/img/ui_example2.png)
