@@ -9,7 +9,7 @@ import Card from '../Card/Card';
  * Calendar component that renders a user's GitHub contribution calendar inside a Card.
  *
  * @component
- * @param {string} props.username - GitHub username whose contribution graph will be displayed.
+ * @param {string} username - GitHub username whose contribution graph will be displayed.
  *   Provide a plain username (e.g. "octocat").
  * @returns {JSX.Element} A Card containing the GitHubCalendar for the specified user.
  *
