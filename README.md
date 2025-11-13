@@ -25,6 +25,8 @@ A small React app used in the "Principles of Web Development (ATA)" course to se
 
 2. Install:
 
+### Locally:
+
 ```
    cd github-user-finder
    npm install
@@ -34,6 +36,13 @@ A small React app used in the "Principles of Web Development (ATA)" course to se
 
 ```
    npm run dev
+```
+
+### With Docker:
+
+```
+   cd github-user-finder
+   docker compose up --build
 ```
 
 Opens at http://localhost:5173

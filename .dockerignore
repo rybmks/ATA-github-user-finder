@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.dockerignore
+.git
+.gitignore
+.env
+.env_example
+.prettierrc
+.prettierignore
+README.md
+eslint.config.js
