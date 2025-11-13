@@ -1,6 +1,26 @@
 import Card from '../Card/Card';
 import Button from '../Button/Button';
 
+/**
+ * InfoCard component — renders a summary card for a GitHub user response.
+ *
+ * @param {Object|null|undefined} response - GitHub API user object. If falsy, the component renders minimal/empty placeholders.
+ * @param {string} response.login - GitHub login/username used to build the profile URL.
+ * @param {string} response.avatar_url - URL of the user's avatar image.
+ * @param {string} [response.name] - Display name; may be null/undefined.
+ * @param {string} [response.email] - Public email; may be null/undefined.
+ * @param {string} [response.bio] - Short biography text; may be null/undefined.
+ * @param {string} [response.location] - User's location string; may be null/undefined.
+ * @param {string} response.created_at - ISO 8601 date string when the account was created.
+ * @param {number} response.public_repos - Number of public repositories.
+ * @param {number} response.followers - Number of followers.
+ * @param {number} response.following - Number of users this account is following.
+ *
+ * @returns {JSX.Element} A Card containing the user's avatar, basic info, stats, and a "View on GitHub" link.
+ *
+ * @example
+ * <InfoCard response={githubUserResponse} />
+ */
 function InfoCard({ response }) {
   const profile_url = `https://github.com/${response.login}`;
 

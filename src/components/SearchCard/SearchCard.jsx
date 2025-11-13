@@ -1,6 +1,15 @@
 import SearchSvg from '../../assets/search-mark.svg';
 import Card from '../Card/Card';
 
+/**
+ * SearchCard
+ *
+ * Simple placeholder card with a search illustration and a short prompt
+ * asking the user to enter a GitHub username.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 function SearchCard() {
   return (
     <Card>

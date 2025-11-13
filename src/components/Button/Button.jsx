@@ -1,3 +1,18 @@
+/**
+ * Reusable Button component styled with Tailwind CSS utility classes.
+ *
+ * Renders a semantic HTML <button> element with a set of default styles
+ * and exposes a `className` prop to extend those styles.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string} [props.className=''] - Additional classes to merge with the component's defaults.
+ * @param {import('react').ReactNode} props.children - Content to render inside the button.
+ * @returns {JSX.Element} The styled button element.
+ *
+ * @example
+ * <Button className="bg-blue-600 hover:bg-blue-500">Submit</Button>
+ */
 function Button({ className = '', children }) {
   return (
     <button

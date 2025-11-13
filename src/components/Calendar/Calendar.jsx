@@ -6,10 +6,16 @@ import GitHubCalendar from 'react-github-calendar';
 import Card from '../Card/Card';
 
 /**
- * There is no real need to create `Calendar`
- * wrapper, nevertheless for possibility of changing
- * logic it's considered to separate Calendar logic
- */
+ * Calendar component that renders a user's GitHub contribution calendar inside a Card.
+ *
+ * @component
+ * @param {string} username - GitHub username whose contribution graph will be displayed.
+ *   Provide a plain username (e.g. "octocat").
+ * @returns {JSX.Element} A Card containing the GitHubCalendar for the specified user.
+ *
+ * @example
+ * <Calendar username="octocat" />
+ **/
 export default function Calendar({ username }) {
   return (
     <Card>

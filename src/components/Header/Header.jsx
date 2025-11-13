@@ -2,6 +2,17 @@ import GithubLogo from '../../assets/github-mark.svg';
 import SearchInput from '../SearchInput/SearchInput';
 import Card from '../Card/Card';
 
+/**
+ * Header component that displays the application logo, title and a search input.
+ *
+ * @param {Object} props - Component props
+ * @param {(text: string) => void} props.setText - Callback to update the current search text
+ * @param {() => void} props.onSearchClick - Callback invoked when the search action is triggered.
+ * @returns {JSX.Element} The Header element
+ *
+ * @example
+ * <Header setText={setSearchText} onSearchClick={handleSearch} />
+ */
 function Header({ setText, onSearchClick }) {
   return (
     <Card>

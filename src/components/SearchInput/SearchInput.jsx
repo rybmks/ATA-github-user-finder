@@ -1,3 +1,19 @@
+
+/**
+ * SearchInput component — a simple username text input with a submit (Search) button.
+ *
+ * Renders an input that calls `setText` on every change and triggers `onSearchClick`
+ * when the form is submitted.
+ *
+ * @component
+ * @param {(text: string) => void} setText - Callback invoked with the current input value on each change.
+ * @param {() => void} onSearchClick - Callback invoked when the form is submitted. The form submission's default behavior is prevented.
+ * @param {string} className - Additional class names to apply.
+ * @returns {JSX.Element} The rendered SearchInput component.
+ *
+ * @example
+ * <SearchInput setText={(t) => setQuery(t)} onSearchClick={() => fetchUser()} className="mb-4" />
+ */
 function SearchInput({ setText, onSearchClick, className }) {
   const handleSubmit = (e) => {
     e.preventDefault();

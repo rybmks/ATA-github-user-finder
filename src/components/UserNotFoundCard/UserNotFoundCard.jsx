@@ -1,6 +1,14 @@
 import AlertSvg from '../../assets/alert-error.svg';
 import Card from '../Card/Card';
 
+/**
+ * UserNotFoundCard - Component that displays an alert icon and a "User not found" message inside a Card.
+ *
+ * This stateless functional component accepts no props.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered UserNotFoundCard component.
+ */
 function UserNotFoundCard() {
   return (
     <Card>
