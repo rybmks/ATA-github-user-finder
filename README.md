@@ -23,17 +23,28 @@ A small React app used in the "Principles of Web Development (ATA)" course to se
    git clone https://github.com/rybmks/ATA-github-user-finder
 ```
 
-2. Install:
+2. Set environment variables into `.env` file according to `.env-example`
+
+3. Install:
+
+### Locally:
 
 ```
    cd github-user-finder
    npm install
 ```
 
-3. Run:
+3.2. Run:
 
 ```
    npm run dev
+```
+
+### With Docker:
+
+```
+   cd github-user-finder
+   docker compose up --build
 ```
 
 Opens at http://localhost:5173
